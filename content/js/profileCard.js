@@ -23,6 +23,7 @@ $(document).ready(function() {
           $('.button-card-profile-close').fadeIn(300);
           $('#button-settings-open').fadeIn(300);
           $('#button-settings-close,#button-settings-save').fadeOut(100);
+          $(this).siblings('.form-basic').fadeOut(200);
         }
         $(profileCard).removeClass('active');
         $(profileImage).removeClass('active');
@@ -36,6 +37,7 @@ $(document).ready(function() {
     $('.button-card-profile-close').fadeOut(100);
     $(this).fadeOut(300, function() {
       $('#button-settings-close,#button-settings-save').fadeIn(300);
+      $(this).siblings('.form-basic').fadeIn(200);
     });
   });
   $('#button-settings-close,#button-settings-save').click(function() {
@@ -45,6 +47,7 @@ $(document).ready(function() {
     $('.button-card-profile-close').fadeIn(300);
     $('#button-settings-open').fadeIn(300);
     $('#button-settings-close,#button-settings-save').fadeOut(100);
+    $(this).siblings('.form-basic').fadeOut(200);
   });
 
 });
