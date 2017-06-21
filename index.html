@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>CleverCSS - Social</title>
+    <!--CLEVERCSS STYLESHEET-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/SanderSalamander/CleverCSS/b2d192d4/clever.css">
+    <!--LOCAL STYLESHEET-->
+    <link rel="stylesheet" href="content/css/master.css">
+    <!--MATERIAL ICONS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+  <!--NAVIGATION START-->
+  <nav class="navbar navbar-dark navbar-tall">
+    <button id="drawer-open" class="drawer-open-left"><i class="material-icons">menu</i></button>
+  </nav>
+  <div id="mobile-drawer" class="drawer drawer-left">
+    <div class="drawer-content drawer-light">
+      <div class="drawer-header drawer-light">
+        <button id="drawer-close"><i class="material-icons">arrow_back</i></button>
+      </div>
+    </div>
+  </div>
+  <!--NAVIGATION END-->
+
+  <!--PROFILE CARD START-->
+  <div class="profile-image">
+    <img src="content/img/profile.jpg" alt="profile-image">
+  </div>
+  <div class="profile-card">
+    <button class="button-card-profile-close"><i class="material-icons">close</i></button>
+    <button id="button-settings-open"><i class="material-icons">settings</i></button>
+    <h1>username</h1>
+    <p>information</p>
+    <p>information</p>
+  </div>
+  <!--PROFILE CARD END-->
+
+  <body>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--CLEVERCSS SCRIPT-->
+    <script src="https://cdn.rawgit.com/SanderSalamander/CleverCSS/c47d1b98/clever.js"></script>
+    <!--PROFILE CARD ANIMATION-->
+    <script src="content/js/profileCard.js"></script>
+  </body>
+</html>

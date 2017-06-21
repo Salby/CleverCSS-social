@@ -1,0 +1,133 @@
+.profile-card
+  z-index: 12
+
+  position: fixed
+  top: 84px
+  right: 28px
+  bottom: auto
+  left: auto
+  width: 56px
+  height: 56px
+  overflow: hidden
+  transform: scale(0)
+  opacity: 0
+
+  background-color: $snow
+  color: $cyprus
+
+  box-shadow: $depth-1
+  border-radius: 2px
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  transition: $fade-out
+  h1
+    font-size: 18px
+    margin: 0
+    padding: 6px
+  p
+    font-size: 14px
+    color: $seafloor
+    padding: 6px
+  .button-card-profile-close
+    position: absolute
+    top: 0
+    right: 0
+    bottom: auto
+    left: auto
+
+    width: 56px
+    height: 56px
+    border-radius: 100%
+    border: 10px solid transparent
+    background-clip: padding-box
+
+    background-color: $transparent
+    transition: $fade-out
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+      color: $crush
+    &:active
+      background-color: $transparentDarker
+  #button-settings-open
+    position: absolute
+    top: 0
+    right: auto
+    bottom: auto
+    left: 0
+
+    width: 56px
+    height: 56px
+    border-radius: 100%
+    border: 10px solid transparent
+    background-clip: padding-box
+    background-color: $transparent
+    transition: $fade-out
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+      color: $crush
+    &:active
+      background-color: $transparentDarker
+.profile-card.active
+  bottom: auto
+  box-shadow: $depth-4
+  top: calc(50vh - 30vw)
+  right: 20vw
+  width: 60vw
+  height: 60vw
+  transform: scale(1)
+  opacity: 1
+
+.profile-image
+  z-index: 13
+
+  width: 56px
+  height: 56px
+  border-radius: 100%
+  background-color: $transparent
+  box-shadow: $depth-3
+
+  transition: $fade-out
+
+  position: fixed
+  top: 84px
+  right: 28px
+  bottom: auto
+  left: auto
+
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    display: block
+    width: 100%
+    height: auto
+    border-radius: 100%
+    transition: $fade-out
+  &:active
+    box-shadow: $depth-4
+
+.profile-image.active
+  top: calc(50vh - 30vw - 42px)
+  right: calc(50% - 42px)
+  width: 84px
+  height: 84px
+  box-shadow: $depth-2
+
+@media only screen and (max-width: 320px)
+
+@media only screen and (min-width: 481px)
+
+@media only screen and (min-width: 769px)
+
+@media only screen and (min-width: 961px)
+
+@media only screen and (min-width: 1201px)
+
+@media only screen and (min-width: 1367px)
