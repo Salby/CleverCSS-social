@@ -115,7 +115,7 @@ nav.navbar-dark {
   top: 28px;
   right: 28px;
   width: calc(100vw - 56px);
-  height: calc(100vh - 56px);
+  height: calc(100vh - 112px);
   display: block; }
   .profile-card.active.settings h1 {
     padding: 22px; }

@@ -17,12 +17,12 @@ $(document).ready(function() {
   $('.darken').click(function() {
     if ($(profileCard).hasClass('active')) {
         if ($(profileCard).hasClass('settings')) {
-            $(profileCard).removeClass('settings');
-            $(profileImage).removeClass('settings');
-            $('.info').fadeIn(300);
-            $('.button-card-profile-close').fadeIn(300);
-            $('#button-settings-open').fadeIn(300);
-            $('#button-settings-close,#button-settings-save').fadeOut(100);
+          $(profileCard).removeClass('settings');
+          $(profileImage).removeClass('settings');
+          $('.info').fadeIn(300);
+          $('.button-card-profile-close').fadeIn(300);
+          $('#button-settings-open').fadeIn(300);
+          $('#button-settings-close,#button-settings-save').fadeOut(100);
         }
         $(profileCard).removeClass('active');
         $(profileImage).removeClass('active');
