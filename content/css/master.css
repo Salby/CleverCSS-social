@@ -25,13 +25,19 @@ nav.navbar-dark {
   align-items: center;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .profile-card h1 {
-    font-size: 18px;
+    font-size: 2em;
     margin: 0;
-    padding: 6px; }
+    padding: 6px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .profile-card p {
-    font-size: 14px;
+    font-size: 1em;
     color: #1AA6B7;
-    padding: 6px; }
+    padding: 6px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .profile-card .button-card-profile-close {
     position: absolute;
     top: 0;
@@ -72,6 +78,28 @@ nav.navbar-dark {
       color: #FE424D; }
     .profile-card #button-settings-open:active {
       background-color: rgba(0, 0, 0, 0.1); }
+  .profile-card #button-settings-close, .profile-card #button-settings-save {
+    position: absolute;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: none; }
+    .profile-card #button-settings-close i, .profile-card #button-settings-save i {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px);
+      color: #FE424D; }
+    .profile-card #button-settings-close:active, .profile-card #button-settings-save:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+  .profile-card #button-settings-close {
+    left: 0; }
+  .profile-card #button-settings-save {
+    right: 0; }
 
 .profile-card.active {
   bottom: auto;
@@ -82,6 +110,15 @@ nav.navbar-dark {
   height: 60vw;
   transform: scale(1);
   opacity: 1; }
+
+.profile-card.active.settings {
+  top: 28px;
+  right: 28px;
+  width: calc(100vw - 56px);
+  height: calc(100vh - 56px);
+  display: block; }
+  .profile-card.active.settings h1 {
+    padding: 22px; }
 
 .profile-image {
   z-index: 13;
@@ -113,7 +150,16 @@ nav.navbar-dark {
   right: calc(50% - 42px);
   width: 84px;
   height: 84px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.profile-image.active.settings {
+  top: 42px;
+  right: calc(100vw - 56px - 42px);
+  width: 56px;
+  height: 56px;
+  box-shadow: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .darken {
   position: fixed;
