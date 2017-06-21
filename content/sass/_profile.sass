@@ -38,6 +38,7 @@
     font-weight: 400
     transition: $fade-out
   .button-card-profile-close
+    cursor: pointer
     position: absolute
     top: 0
     right: 0
@@ -60,6 +61,7 @@
     &:active
       background-color: $transparentDarker
   #button-settings-open
+    cursor: pointer
     position: absolute
     top: 0
     right: auto
@@ -81,6 +83,7 @@
     &:active
       background-color: $transparentDarker
   #button-settings-close,#button-settings-save
+    cursor: pointer
     position: absolute
     bottom: 0
     width: 56px
@@ -124,6 +127,7 @@
 
 .profile-image
   z-index: 13
+  cursor: pointer
 
   width: 56px
   height: 56px
@@ -171,8 +175,86 @@
 @media only screen and (min-width: 481px)
 
 @media only screen and (min-width: 769px)
+  .profile-card
+    top: calc(120px - 30px)
+    right: auto
+    bottom: auto
+    left: 14px
+    transform: scale(1)
+    opacity: 1
+    width: 20vw
+    height: 20vw
+    box-shadow: $depth-3
+    .button-card-profile-close
+      display: none
+    #button-settings-open
+      display: none
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
+  .profile-card.active
+    .button-card-profile-close
+      display: block
+    #button-settings-open
+      display: block
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
+    #button-settings-close,#button-settings-save
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
+  .profile-image
+    top: 60px
+    right: auto
+    bottom: auto
+    left: calc(10vw + 14px - 30px)
+    width: 60px
+    height: 60px
+    box-shadow: $depth-2
+    &:hover
+      box-shadow: $depth-3
+    &:active
+      box-shadow: $depth-4
+  .profile-image.active
+    top: 60px
+    left: calc(30vw + 14px - 45px)
+    width: 90px
+    height: 90px
 
 @media only screen and (min-width: 961px)
+  .profile-card.active
+    top: 10vw
+    left: 10vw
+    width: 30vw
+    height: 30vw
+  .profile-card.active.settings
+    top: 5vw
+    left: 5vw
+    width: 40vw
+    height: 40vw
+  .profile-image.active
+    cursor: default
+    top: calc(10vw - 45px)
+    left: calc(25vw - 45px)
+    &:hover
+      box-shadow: $depth-2
+    &:active
+      box-shadow: $depth-2
+  .profile-image.active.settings
+    cursor: pointer
+    top: calc(5vw + 14px)
+    left: calc(5vw + 14px)
+    &:hover
+      top: calc(5vw + 10px)
+      left: calc(5vw + 10px)
+      width: 62px
+      height: 62px
+      border: 2px solid $crush
+      box-shadow: $depth-0
 
 @media only screen and (min-width: 1201px)
 

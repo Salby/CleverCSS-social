@@ -1,4 +1,7 @@
 nav.navbar-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #022D41 !important; }
   nav.navbar-dark #drawer-open i {
     color: #DAECF3; }
@@ -39,6 +42,7 @@ nav.navbar-dark {
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .profile-card .button-card-profile-close {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
@@ -59,6 +63,7 @@ nav.navbar-dark {
     .profile-card .button-card-profile-close:active {
       background-color: rgba(0, 0, 0, 0.1); }
   .profile-card #button-settings-open {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: auto;
@@ -79,6 +84,7 @@ nav.navbar-dark {
     .profile-card #button-settings-open:active {
       background-color: rgba(0, 0, 0, 0.1); }
   .profile-card #button-settings-close, .profile-card #button-settings-save {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     width: 56px;
@@ -124,6 +130,7 @@ nav.navbar-dark {
 
 .profile-image {
   z-index: 13;
+  cursor: pointer;
   width: 56px;
   height: 56px;
   border-radius: 100%;
@@ -163,6 +170,90 @@ nav.navbar-dark {
   box-shadow: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
+@media only screen and (min-width: 769px) {
+  .profile-card {
+    top: calc(120px - 30px);
+    right: auto;
+    bottom: auto;
+    left: 14px;
+    transform: scale(1);
+    opacity: 1;
+    width: 20vw;
+    height: 20vw;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    .profile-card .button-card-profile-close {
+      display: none; }
+    .profile-card #button-settings-open {
+      display: none; }
+      .profile-card #button-settings-open:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .profile-card #button-settings-open:active {
+        background-color: rgba(0, 0, 0, 0.1); }
+
+  .profile-card.active .button-card-profile-close {
+    display: block; }
+  .profile-card.active #button-settings-open {
+    display: block; }
+    .profile-card.active #button-settings-open:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    .profile-card.active #button-settings-open:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+  .profile-card.active #button-settings-close:hover, .profile-card.active #button-settings-save:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .profile-card.active #button-settings-close:active, .profile-card.active #button-settings-save:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+  .profile-image {
+    top: 60px;
+    right: auto;
+    bottom: auto;
+    left: calc(10vw + 14px - 30px);
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .profile-image:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    .profile-image:active {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+  .profile-image.active {
+    top: 60px;
+    left: calc(30vw + 14px - 45px);
+    width: 90px;
+    height: 90px; } }
+@media only screen and (min-width: 961px) {
+  .profile-card.active {
+    top: 10vw;
+    left: 10vw;
+    width: 30vw;
+    height: 30vw; }
+
+  .profile-card.active.settings {
+    top: 5vw;
+    left: 5vw;
+    width: 40vw;
+    height: 40vw; }
+
+  .profile-image.active {
+    cursor: default;
+    top: calc(10vw - 45px);
+    left: calc(25vw - 45px); }
+    .profile-image.active:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .profile-image.active:active {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+  .profile-image.active.settings {
+    cursor: pointer;
+    top: calc(5vw + 14px);
+    left: calc(5vw + 14px); }
+    .profile-image.active.settings:hover {
+      top: calc(5vw + 10px);
+      left: calc(5vw + 10px);
+      width: 62px;
+      height: 62px;
+      border: 2px solid #FE424D;
+      box-shadow: none; } }
 /* FORMS */
 .form-basic {
   width: 480px;
@@ -504,6 +595,41 @@ fieldset {
   background: #cc575d;
   left: 0;
   width: 100%; }
+
+#content-main {
+  padding-top: 112px; }
+
+.grid-main {
+  overflow-y: auto;
+  column-count: 1;
+  column-gap: 6px;
+  padding: 6px; }
+  .grid-main .card {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 6px 0;
+    z-index: 1; }
+    .grid-main .card:active {
+      z-index: 2; }
+
+@media only screen and (min-width: 481px) {
+  .grid-main {
+    column-count: 2; } }
+@media only screen and (min-width: 769px) {
+  #content-main {
+    padding-top: 120px; }
+
+  .grid-main {
+    margin: 0;
+    margin-left: auto !important;
+    column-count: 3; }
+    .grid-main .card:hover {
+      z-index: 2; } }
+@media only screen and (min-width: 1201px) {
+  .grid-main {
+    margin: auto; } }
+.card-footer .button-flat {
+  color: #FE424D; }
 
 .darken {
   position: fixed;

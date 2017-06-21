@@ -23,7 +23,7 @@ $(document).ready(function() {
           $('.button-card-profile-close').fadeIn(300);
           $('#button-settings-open').fadeIn(300);
           $('#button-settings-close,#button-settings-save').fadeOut(100);
-          $(this).siblings('.form-basic').fadeOut(200);
+          $(profileCard).children('.form-basic').fadeOut(200);
         }
         $(profileCard).removeClass('active');
         $(profileImage).removeClass('active');
@@ -49,5 +49,12 @@ $(document).ready(function() {
     $('#button-settings-close,#button-settings-save').fadeOut(100);
     $(this).siblings('.form-basic').fadeOut(200);
   });
+
+
+
+  var e = $('.card');
+  for (var i = 0; i < 10; i++) {
+    e.clone().insertAfter(e);
+  }
 
 });

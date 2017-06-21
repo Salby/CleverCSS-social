@@ -1,0 +1,40 @@
+#content-main
+  padding-top: 112px
+
+.grid-main
+  overflow-y: auto
+  column-count: 1
+  column-gap: 6px
+  padding: 6px
+  .card
+    display: inline-block
+    width: 100%
+    margin: 0 0 6px 0
+    z-index: 1
+    &:active
+      z-index: 2
+
+@media only screen and (max-width: 320px)
+
+@media only screen and (min-width: 481px)
+  .grid-main
+    column-count: 2
+
+@media only screen and (min-width: 769px)
+  #content-main
+    padding-top: 120px
+  .grid-main
+    margin: 0
+    margin-left: auto !important
+    column-count: 3
+    .card
+      &:hover
+        z-index: 2
+
+@media only screen and (min-width: 961px)
+
+@media only screen and (min-width: 1201px)
+  .grid-main
+    margin: auto
+
+@media only screen and (min-width: 1367px)
