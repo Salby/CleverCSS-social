@@ -1,6 +1,4 @@
 nav.navbar-dark {
-  -webkit-border: none;
-  -webkit-outline: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -654,9 +652,5 @@ fieldset {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 11;
   display: none; }
-
-* {
-  -webkit-border: none;
-  -webkit-outline: none; }
 
 /*# sourceMappingURL=master.css.map */
