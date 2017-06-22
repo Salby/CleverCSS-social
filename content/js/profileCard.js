@@ -49,8 +49,23 @@ $(document).ready(function() {
     $('#button-settings-close,#button-settings-save').fadeOut(100);
     $(this).siblings('.form-basic').fadeOut(200);
   });
+  $('#button-settings-close').click(function() {
+    $('#tel').val(telDisplay);
+    $('#address').val(addDisplay);
+    $('#tel-display').text(telDisplay);
+    $('#add-display').text(addDisplay);
+  });
+  $('#button-settings-save').click(function() {
+    var telDisplay_edit = $('#tel').val();
+    var addDisplay_edit = $('#address').val();
+    $('#tel-display').text(telDisplay_edit);
+    $('#add-display').text(addDisplay_edit);
+  });
 
-
+  var telDisplay = $('#tel').val();
+  var addDisplay = $('#address').val();
+  $('#tel-display').text(telDisplay);
+  $('#add-display').text(addDisplay);
 
   var e = $('.card');
   for (var i = 0; i < 10; i++) {

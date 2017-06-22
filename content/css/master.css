@@ -33,14 +33,16 @@ nav.navbar-dark {
     padding: 6px;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center; }
   .profile-card p {
     font-size: 1em;
     color: #1AA6B7;
     padding: 6px;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 400;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center; }
   .profile-card .button-card-profile-close {
     cursor: pointer;
     position: absolute;
@@ -222,22 +224,32 @@ nav.navbar-dark {
     width: 90px;
     height: 90px; } }
 @media only screen and (min-width: 961px) {
+  .profile-card {
+    top: 84px;
+    left: 14px;
+    width: 200px;
+    height: 200px; }
+
   .profile-card.active {
     top: 10vw;
     left: 10vw;
-    width: 30vw;
-    height: 30vw; }
+    width: 300px;
+    height: 300px; }
 
   .profile-card.active.settings {
     top: 5vw;
     left: 5vw;
-    width: 40vw;
-    height: 40vw; }
+    width: 500px;
+    height: 500px; }
+
+  .profile-image {
+    top: calc(84px - 30px);
+    left: calc(100px + 14px - 30px); }
 
   .profile-image.active {
     cursor: default;
     top: calc(10vw - 45px);
-    left: calc(25vw - 45px); }
+    left: calc(10vw + 150px - 45px); }
     .profile-image.active:hover {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
     .profile-image.active:active {
