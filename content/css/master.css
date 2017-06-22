@@ -1,5 +1,6 @@
 nav.navbar-dark {
-  margin-top: -1px;
+  -webkit-border: none;
+  -webkit-outline: none;
   position: fixed;
   top: 0;
   left: 0;
