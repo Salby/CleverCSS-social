@@ -189,6 +189,10 @@
     box-shadow: $depth-3
     .button-card-profile-close
       display: none
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
     #button-settings-open
       display: none
       &:hover
@@ -200,10 +204,6 @@
       display: block
     #button-settings-open
       display: block
-      &:hover
-        background-color: $transparentDark
-      &:active
-        background-color: $transparentDarker
     #button-settings-close,#button-settings-save
       &:hover
         background-color: $transparentDark

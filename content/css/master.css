@@ -185,6 +185,10 @@ nav.navbar-dark {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
     .profile-card .button-card-profile-close {
       display: none; }
+      .profile-card .button-card-profile-close:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .profile-card .button-card-profile-close:active {
+        background-color: rgba(0, 0, 0, 0.1); }
     .profile-card #button-settings-open {
       display: none; }
       .profile-card #button-settings-open:hover {
@@ -196,10 +200,6 @@ nav.navbar-dark {
     display: block; }
   .profile-card.active #button-settings-open {
     display: block; }
-    .profile-card.active #button-settings-open:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
-    .profile-card.active #button-settings-open:active {
-      background-color: rgba(0, 0, 0, 0.1); }
   .profile-card.active #button-settings-close:hover, .profile-card.active #button-settings-save:hover {
     background-color: rgba(0, 0, 0, 0.05); }
   .profile-card.active #button-settings-close:active, .profile-card.active #button-settings-save:active {
